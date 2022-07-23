@@ -8,12 +8,12 @@ $('div.top-img').each(function () {
         scroll;
     $win.on('load scroll', function () {
       scroll = $win.scrollTop();
-      current = (0.02 - (position - scroll) / $winH);
+      current = (0 - (position - scroll) / $winH);
       if (current > 0.9) {
         current = 1;
       }
       if (scroll > position - $winH) {
-        $connect.css({opacity: 0.9999999 - current});
+        $connect.css({opacity: 0.7 - current});
       }
     });
 });
