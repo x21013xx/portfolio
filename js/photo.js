@@ -13,7 +13,7 @@ $('div.top-img').each(function () {
         current = 1;
       }
       if (scroll > position - $winH) {
-        $connect.css({opacity: 0.7 - current});
+        $connect.css({opacity: 0.89 - current});
       }
     });
 });
