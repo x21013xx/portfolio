@@ -8,7 +8,7 @@ $('div.top-img').each(function () {
         scroll;
     $win.on('load scroll', function () {
       scroll = $win.scrollTop();
-      current = (0 - (position - scroll) / $winH);
+      current = (0.02 - (position - scroll) / $winH);
       if (current > 0.9) {
         current = 1;
       }
