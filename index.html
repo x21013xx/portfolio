@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page</title>
+    <script src="./js/fire.js" defer></script>
+    <script src="./js/mainpage.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js" integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="./mainstyle.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+</head>
+<body>
+    <section id="loading">
+        <div class="loadclick">
+            <span></span>Click
+        </div>
+        <button id="loadbutton"></button>
+        <div class="imagebox">
+            <img src="./image/fire.svg" width="300px" height="300px" alt="fire">
+        </div>
+        <canvas id="fire"></canvas>
+    </section>
+
+    <header>
+        <a href="/index.html"><img src="./port-image/mainlogo.svg" width="300px" height="50px" alt="mainlogo"></a>
+    </header>
+
+    <section id="myname">
+        <div class="mainimg">
+            <nav class="slider-controller">
+               <ul>
+                   <li><a id="sc-to-left">←</a></li>
+                   <li><a id="sc-to-right">→</a></li>
+               </ul>
+            </nav>
+        </div>
+    </section>
+
+    <div class="myname-text">
+        <svg version="1.1" id="mask" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	            y="0px" viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" width="200px" height="200" xml:space="preserve">
+            <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./image/myname-in.svg" width="200" height="200" mask="url(#clipmask)"></image>
+            <mask id="clipmask" maskUnits="objectBoundingBox">
+                <path class="st0" d="M6.14,104.07c0,0-5.04,8.76,1.6,12.37s8.92,1.77,19.25-12.37S46.12,80.6,38.51,68.88c0,0-13.27,2.39-13.79,8.99
+	                c-0.53,6.6-0.52,34.58,3.09,37.6c3.6,3.02,16.5,1.1,30.93-35.18c0,0-17.47,12.29-9.12,12.62l15.3-2.77c0,0-17.66,0.11-13.47,20.93
+	                c0,0,5.75,6.76,23.26-17.62c0,0-14.64,14.05-5.9,18.26c8.74,4.21,20.06-12.91,15.56-14.53c-4.5-1.62-14.3,9.41-7.21,12.53
+	                s18.37-4.86,16.11-14.66"/>
+                <path class="st1" d="M110.01,72.37c0,0,11.65-6.67,12.27-3.72c0,0,9.14,1.77,3.07,21.47c0,0-7.43,16.2-7.26,19.07
+	                c0.17,2.87,15.42-2.44,15.91-9.19l8.73-19.65c0,0,2.88-6.89,7.5-7.56c4.62-0.68-4.33,24.41-4.33,24.41s-12.49,28.51-20.84,30.71
+	                c0,0-13.21,11.47-18.38,4c-5.17-7.47,28.09-19.7,32.35-24.4c4.26-4.71,15.74-8.45,17.46-14.45s-10.23,17.83-5.93,21.25
+	                c4.3,3.42,20.89-10,21.49-17.72c0.6-7.72-7.82,13.58-4.62,13.71c3.2,0.13,11.87-0.38,16.27-16.83s-11.83,22.55-1.27,20.57
+	                c10.57-1.97,11.51-8.03,7.99-18.99"/>
+                <path class="st1" d="M191.42,89.9c0,0-2.86-5.88-6.7-7.99"/>
+            </mask>
+        </svg>
+    </div>
+
+    <section id="About-me">
+        <div class="About-text">
+            <h2><span class="Trigger">About me</span></h2>
+            <p><span class="Trigger">私について</span></p>
+        </div>
+        <div class="About-ex">
+            <h2><span class="Trigger">猫とキャンプを愛する大学生。</span></h2>
+            <p><span class="Trigger">猫と過ごすゆったりな一日、火を観ながら心を癒す時、大切な人とのひととき</span></p><br><br>
+            <p><span class="Trigger">そんな瞬間を切り取る、それに細かなスパイスをかける</span></p><br><br>
+            <p><span class="Trigger">料理のように作品に彩りを。</span></p>
+        </div>
+    </section>
+
+    <section id="About">
+        <div class="About-name-box">
+            <h3><span class="Trigger">伊東　維</span></h3>
+            <p><span class="Trigger">Yui Ito</span></p>
+        </div>
+        <div class="Aboutbox">
+            <div class="faceimg">
+                <img src="./image/face.JPG" width="200px" height="200px" alt="face">
+            </div>
+            <table>
+                <tr>
+                    <th><span class="Trigger">学歴:</span></th>
+                    <td><span class="Trigger">下田市立下田小学校 > 下田市立下田中学校 ><br> 愛知工業大学名電高等学校:情報科 > 愛知工業大学:情報科学科:メディア情報専攻</span></td>
+                </tr>
+                <tr>
+                    <th><span class="Trigger">生年月日:</span></th>
+                    <td><span class="Trigger">2003年01月31日</span></td>
+                </tr>
+                <tr>
+                    <th><span class="Trigger">お問い合わせ:</span></th>
+                    <td><span class="Trigger">x21013xx@aitech.ac.jp</span></td>
+                </tr>
+                <tr>
+                    <th><span class="Trigger">趣味:</span></th>
+                    <td><span class="Trigger">キャンプ・旅行・釣り・写真・料理</span></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section id="skill">
+        <div class="skill-top">
+            <h2>Skill</h2>
+            <p>スキル</p>
+        </div>
+        <div class="skill-box">
+            <div class="Ai-box">
+                <div class="skill-img">
+                    <h3>Illustrator</h3>
+                    <img src="./image/Ai_icon.jpeg" width="100px" height="100px" alt="Ai_icon">
+                </div>
+                <div class="skill-lavel">
+                    <p>★★★★☆</p>
+                </div>
+            </div>
+            <div class="Ps-box">
+                <div class="skill-img">
+                    <h3>Photoshop</h3>
+                    <img src="./image/Ps-icon.svg" width="75px" height="75px" alt="Ps_icon">
+                </div>
+                <div class="skill-lavel">
+                    <p>★★★☆☆</p>
+                </div>
+            </div>
+            <div class="Maya-box">
+                <div class="skill-img">
+                    <h3>MAYA</h3>
+                    <img src="./image/MAYA-icon.jpg" width="75px" height="75px" alt="MAYA_icon">
+                </div>
+                <div class="skill-lavel">
+                    <p>★★★☆☆</p>
+                </div>
+            </div>
+            <div class="Pr-box">
+                <div class="skill-img">
+                    <h3>Premiere</h3>
+                    <img src="./image/Pr-icon.jpg" width="75px" height="75px" alt="Pr_icon">
+                </div>
+                <div class="skill-lavel">
+                    <p>★★★☆☆</p>
+                </div>
+            </div>
+        </div>
+        <div class="skill-box2">
+            <div class="HTML-box">
+                <div class="skill-img">
+                    <h3>HTML</h3>
+                    <img src="./image/HTML-icon.jpg" width="60px" height="80px" alt="HTML_icon">
+                </div>
+                <div class="skill-lavel">
+                    <p>★★★★☆</p>
+                </div>
+            </div>
+            <div class="CSS-box">
+                <div class="skill-img">
+                    <h3>CSS</h3>
+                    <img src="./image/CSS-icon.jpg" width="60px" height="80px" alt="CSS_icon">
+                </div>
+                <div class="skill-lavel">
+                    <p>★★★★☆</p>
+                </div>
+            </div>
+            <div class="Js-box">
+                <div class="skill-img">
+                    <h3>JavaScript</h3>
+                    <img src="./image/Js-icon.svg" width="75px" height="75px" alt="Js_icon">
+                </div>
+                <div class="skill-lavel">
+                    <p>★★☆☆☆</p>
+                </div>
+            </div>
+            <div class="Camp-box">
+                <div class="skill-img">
+                    <h3>Camp</h3>
+                    <img src="./image/Camp-icon.svg" width="75px" height="75px" alt="Camp_icon">
+                </div>
+                <div class="skill-lavel">
+                    <p>★★★★☆</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="create">
+        <div class="slider-box">
+            <ul class="slider">
+                <li><a href="/Photo.html"><img src="./image/create-t1.jpg" alt="写"></a></li>
+                <li><a href="/Movie.html"><img src="./image/create-t2.jpg" alt="動"></a></li>
+                <li><a href="/CG.html"><img src="./image/create-t4.jpg" alt="創"></a></li>
+                <li><a href="/Camp.html"><img src="./image/create-t3.jpg" alt="灯"></a></li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-create">
+            <li><a href="/Photo.html">PHOTO</a></li>
+            <li><a href="/Movie.html">MOVIE</a></li>
+            <li><a href="/CG.html">3DCG</a></li>
+            <li><a href="/Camp.html">CAMP</a></li>
+        </div>
+        <div class="footer-icon">
+            <ul>
+                <li><a href="https://www.instagram.com/" target="_blank"><img src="./port-image/Instagram.svg" width="30px" height="30px" alt=""></a></li>
+                <li><a href="https://twitter.com/home?lang=ja" target="_blank"><img src="./port-image/Twitter.svg" width="30px" height="30px" alt=""></a></li>
+            </ul>
+        </div>
+        <small>
+          2022 Yui ito
+        </small>
+      </footer>
+</body>
+</html>
