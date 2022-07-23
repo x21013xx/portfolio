@@ -17,3 +17,21 @@ $('div.top-img').each(function () {
       }
     });
 });
+
+function TextAnimeControl() {
+  $('.Trigger').each(function(){ 
+  var elemPos = $(this).offset().top-50;
+  var scroll = $(window).scrollTop();
+  var windowHeight = $(window).height();
+  if (scroll >= elemPos - windowHeight){
+  $(this).addClass('app');// 画面内に入ったらblurというクラス名を追記
+  }else{
+  $(this).removeClass('app');// 画面外に出たらblurというクラス名を外す
+  }
+  });
+}
+
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function () {
+  TextAnimeControl();/* アニメーション用の関数を呼ぶ*/
+});// ここまで画面をスクロールをしたら動かしたい場合の記述

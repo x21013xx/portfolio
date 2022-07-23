@@ -63,11 +63,198 @@ header {
     left: 750px;
 }
 
+.top-img-p>.p1 {
+    font-size: 50px;
+    font-weight: normal;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 800px;
+    left: 400px;
+}
+
+.top-img-p>.p2 {
+    font-size: 50px;
+    font-weight: normal;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 900px;
+    left: 400px;
+}
+
+.top-img-p>.p3 {
+    font-size: 50px;
+    font-weight: normal;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 1000px;
+    left: 400px;
+}
+
 .container{
     position: relative;
-    z-index:1;
-      /*以下はレイアウトのための記述*/
-    background:#fff;
-    padding:600px 0;
+    z-index: 1;
+    background: #fff;
+    padding: 10em;
     text-align: center;
+}
+
+.container>h2 {
+    font-weight: normal;
+    font-size: 50px;
+    padding-bottom: 2.5em;
+}
+  
+.container>p {
+    font-size: 20px;
+    line-height: 3;
+}
+
+/* work */
+#work {
+    position: relative;
+}
+
+.work-img>h2 {
+    font-weight: normal;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.work-img>img {
+    width: 100%;
+    z-index: -1;
+}
+
+.work-container {
+    padding: 8em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+figure>img {
+    object-fit: cover;
+}
+
+figure.hover-parent {
+    width: 300px;
+    height: 300px;
+    margin: 1em;
+    position: relative;
+    overflow: hidden;
+}
+
+figcaption.hover-mask {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    color: #fff;
+    padding: 30px;
+}
+
+figcaption.hover-mask>.p4 {
+    text-align: center;
+    line-height: 2;
+    font-size: 20px;
+}
+
+figcaption.hover-mask>p {
+    text-align: center;
+    line-height: 2;
+}
+
+figcaption:hover.hover-mask {
+    opacity: 1;
+    transition:all 0.6s ease;
+}
+
+/* footer */
+
+footer {
+    padding-top: 5em;
+    background-color: rgb(224, 224, 224);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(87, 87, 87);
+  }
+  
+  .footer-create {
+    display: flex;
+    list-style: none;
+  }
+  
+  .footer-create  li{
+    padding: 1.5em 1.5em 5em 1.5em;
+  }
+  
+  .footer-create li a {
+    color: rgb(87, 87, 87);
+    text-decoration: none;
+    z-index: 9999;
+  }
+  
+  .footer-create li a:hover {
+    color: rgb(80, 99, 148);
+    text-decoration: underline;
+  }
+  
+  .footer-icon ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .footer-icon ul li {
+    padding-bottom: 1em;
+    padding-top: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  footer small {
+    text-align: center;
+    font-size: 0.5rem;
+    margin-top: 5em;
+    padding: 5em 60em;
+    border-top: rgb(160, 160, 160) solid 2px;
+  }
+
+/* 細かなアニメーション */
+.app {
+    animation-name:appAnime;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+}
+  
+@keyframes appAnime {
+    from {
+    filter: blur(10px);
+    transform: scale(1.02);
+    opacity: 0;
+    }
+  
+    to {
+    filter: blur(0);
+    transform: scale(1);
+    opacity: 1;
+    }
+}
+   
+.Trigger {
+    opacity: 0;
 }
