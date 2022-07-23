@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 16px;
+}
+
+body {
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+}
+
+
+header {
+    position: fixed;
+    margin: 0.5rem;
+    z-index: 9999;
+}
+
+#top {
+    background-color: black;
+    position: relative;
+}
+
+.top-img {
+	width:100%;
+	height: 150vh;
+    opacity: 1;
+}
+
+.top-img:before {
+	content:"";
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:-1;
+	width:100%;
+	height: 150vh;
+	/*背景画像設定*/
+    opacity: 1;
+	background:url("./Photoimage/photo-top.jpg") no-repeat center;
+	background-size:cover;
+}
+
+
+.top-img>h2 {
+    font-size: 300px;
+    font-weight: normal;
+    font-family: YuMincho, 'Yu Mincho', serif;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 60px;
+    left: 450px;
+}
+
+.top-img>p {
+    font-size: 50px;
+    font-weight: normal;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 300px;
+    left: 750px;
+}
+
+.container{
+    position: relative;
+    z-index:1;
+      /*以下はレイアウトのための記述*/
+    background:#fff;
+    padding:600px 0;
+    text-align: center;
+}
