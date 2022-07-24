@@ -1,0 +1,208 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 16px;
+}
+
+body {
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+}
+
+
+header {
+    position: fixed;
+    margin: 0.5rem;
+    z-index: 9999;
+}
+
+#top {
+    background-color: black;
+    position: relative;
+}
+
+.top-img {
+	width:100%;
+	height: 150vh;
+    opacity: 1;
+}
+
+.top-img:before {
+	content:"";
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:-1;
+	width:100%;
+	height: 150vh;
+	/*背景画像設定*/
+    opacity: 1;
+	background:url("./camp-img/camp-top.jpg") no-repeat center;
+	background-size:cover;
+}
+
+
+.top-img>h2 {
+    font-size: 300px;
+    font-weight: normal;
+    font-family: YuMincho, 'Yu Mincho', serif;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 60px;
+    left: 450px;
+}
+
+.top-img>p {
+    font-size: 50px;
+    font-weight: normal;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 300px;
+    left: 750px;
+}
+
+.top-img-p>.p1 {
+    font-size: 50px;
+    font-weight: normal;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 800px;
+    left: 400px;
+}
+
+.top-img-p>.p2 {
+    font-size: 50px;
+    font-weight: normal;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 900px;
+    left: 400px;
+}
+
+.top-img-p>.p3 {
+    font-size: 50px;
+    font-weight: normal;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 1000px;
+    left: 400px;
+}
+
+.container{
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    padding: 10em;
+    text-align: center;
+}
+
+.container>h2 {
+    font-weight: normal;
+    font-size: 50px;
+    padding-bottom: 2.5em;
+}
+  
+.container>p {
+    font-size: 20px;
+    line-height: 3;
+}
+
+/* work */
+#work {
+    position: relative;
+}
+
+
+.work-container {
+    padding: 8em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+figure>img {
+    object-fit: cover;
+}
+
+figure.hover-parent {
+    width: 300px;
+    height: 300px;
+    margin: 1em;
+    position: relative;
+    overflow: hidden;
+}
+
+figcaption.hover-mask {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    color: #fff;
+    padding: 30px;
+}
+
+figcaption.hover-mask>.p4 {
+    text-align: center;
+    line-height: 2;
+    font-size: 20px;
+}
+
+figcaption.hover-mask>p {
+    text-align: center;
+    line-height: 2;
+}
+
+figcaption:hover.hover-mask {
+    opacity: 1;
+    transition:all 0.6s ease;
+}
+
+/* footer */
+
+footer {
+    background-color: rgb(224, 224, 224);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(87, 87, 87);
+}
+
+footer small {
+    text-align: center;
+    font-size: 0.5rem;
+    margin-top: 5em;
+    padding: 5em 60em;
+  }
+
+/* 細かなアニメーション */
+.app {
+    animation-name:appAnime;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+}
+  
+@keyframes appAnime {
+    from {
+    filter: blur(10px);
+    transform: scale(1.02);
+    opacity: 0;
+    }
+  
+    to {
+    filter: blur(0);
+    transform: scale(1);
+    opacity: 1;
+    }
+}
+   
+.Trigger {
+    opacity: 0;
+}
